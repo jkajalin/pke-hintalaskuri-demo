@@ -1,24 +1,25 @@
-<html>
+<!doctype html>
+<html class="dark">
 
 <head>      
       <title>PKE Hintalaskuri Demo</title>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="styles.css">
+      <link href="main.css" rel="stylesheet">
 </head>
 
-<body>
-      <div id="hintalaskuri">
-            <h1>Tilitoimiston Hintalaskuri Demo</h1>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+      <div id="hintalaskuri" class="grid grid-cols-1 mx-auto max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10">
+            <h1 class="pb-4 text-xl font-medium text-black dark:text-white">Tilitoimiston Hintalaskuri Demo</h1>
             <form>
 
-                  <p><label>Myyntilaskut*:</label><input id="myyntilaskut-field01" min="1" max="999" value="0"
+                  <p class="p-1"><label>Myyntilaskut*:</label><input class="p-2 m-2 rounded-md bg-gray-700"  id="myyntilaskut-field01" min="1" max="999" value="0"
                               type="number" name="myyntilaskut-field">
                   </p>
-                  <p><label>Ostolaskut*:</label><input id="ostolaskut-field01" min="1" max="999" value="0" type="number"
+                  <p><label>Ostolaskut*:</label><input class="p-2 m-2 rounded-md bg-gray-700" id="ostolaskut-field01" min="1" max="999" value="0" type="number"
                               name="ostolaskut-field">
                   </p>
-                  <p><label>Kuitit*:</label><input id="kuitit-field01" min="1" max="999" value="0" type="number"
+                  <p class="p-1"><label>Kuitit*:</label><input class="p-2 m-2 rounded-md bg-gray-700" id="kuitit-field01" min="1" max="999" value="0" type="number"
                               name="kuitit-field">
                   </p>
                   <div class="hidden-fields-container">
@@ -28,12 +29,12 @@
                                     readonly="readonly" value="1" type="number" name="tapahtumat-total-field">
                         </p>
                   </div>
-                  <p><label>Palkat:</label><input id="palkat-field01" min="0" max="999" value="0" type="number"
+                  <p class="p-1"><label>Palkat:</label><input class="p-2 m-2 rounded-md bg-gray-700" id="palkat-field01" min="0" max="999" value="0" type="number"
                               name="palkat-field">
                   </p>
-                  <p><button type="button" id="laske-hinta-btn" onclick="laskeHinta()">Laske hinta</button>
+                  <p class="p-1"><button type="button" id="laske-hinta-btn" onclick="laskeHinta()" class="p-2 bg-sky-500 hover:bg-sky-700 rounded-md">Laske hinta</button>
                   </p>
-                  <p><label id="hinta-lbl">~Hinta: 0€</label> ALV.0
+                  <p class="p-4"><label id="hinta-lbl">~Hinta: 0€</label> ALV.0
                   </p>
                   <div class="hidden-fields-container">
                         <p><input id="hinta-total-field01" min="0" max="9999" readonly="readonly" value="0"
